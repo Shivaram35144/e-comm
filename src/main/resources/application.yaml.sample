@@ -1,0 +1,17 @@
+# Sample application.yaml for reference
+# Copy this file to application.yaml and update values as needed
+
+server:
+  port: 8080
+
+spring:
+  datasource:
+    url: jdbc:mysql://localhost:3306/dbname
+    username: your_username
+    password: your_password
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+
+# Add other configuration properties as needed
