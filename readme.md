@@ -67,14 +67,13 @@ com/example/ecommerce
 │   └── util/        # optional helpers
 └── exception/
 This follows Spring Boot’s “main class in root package + feature‑oriented subpackages” best practices. web:6web:12web:18
+```
 3. Configuration Outline
 3.1 MongoDB Config
 Create `src/main/resources/application.yml`:
-	•	Configure:
-	•	`server.port`
-	•	`spring.application.name`
-	•	`spring.data.mongodb.*` (either `host`/`port`/`database` or `uri`)
+
 Example shape (you fill values):
+```
 server:
   port: 8080
 
@@ -91,18 +90,21 @@ spring:
 
       # OPTION 2: Atlas (comment local, use uri)
       # uri: mongodb+srv://<user>:<password>@<cluster-host>/ecommerce_db?retryWrites=true&w=majority
-
+```
 Ensure the property prefix is `spring.data.mongodb` so auto‑configuration works. web:37web:38web:40
+
 3.2 Profiles (Optional)
 Add `application-dev.yml`, `application-prod.yml` later to practice environment‑specific Mongo URIs and settings. web:18web:38
+
 4. Domain & Collections Design (You Model the Fields)
 Design MongoDB documents (collections) for:
 	•	`users`
-	•	`categories`
 	•	`products`
 	•	`carts`
 	•	`orders`
+
 Use Mongo’s document‑oriented style: embed line items inside cart and order documents, not separate tables. web:28web:1
+
 4.1 Suggested Aggregates
 You decide exact fields, types and indexes, but stick to these aggregates:
 	•	User (collection: `users`)
