@@ -1,0 +1,218 @@
+{
+  "info": {
+    "name": "E-Comm API Collection",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "description": "Postman collection for testing E-Comm backend controllers."
+  },
+  "item": [
+    {
+      "name": "User",
+      "item": [
+        {
+          "name": "Create User",
+          "request": {
+            "method": "POST",
+            "header": [{"key": "Content-Type", "value": "application/json"}],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"name\": \"John Doe\",\n  \"email\": \"john@example.com\",\n  \"password\": \"secret\"\n}"
+            },
+            "url": {
+              "raw": "http://localhost:8080/user",
+              "protocol": "http",
+              "host": ["localhost"],
+              "port": "8080",
+              "path": ["user"]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Get All Users",
+          "request": {
+            "method": "GET",
+            "url": {
+              "raw": "http://localhost:8080/user",
+              "protocol": "http",
+              "host": ["localhost"],
+              "port": "8080",
+              "path": ["user"]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "User Health Check",
+          "request": {
+            "method": "GET",
+            "url": {
+              "raw": "http://localhost:8080/user/healthCheck",
+              "protocol": "http",
+              "host": ["localhost"],
+              "port": "8080",
+              "path": ["user", "healthCheck"]
+            }
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "Product",
+      "item": [
+        {
+          "name": "Create Product",
+          "request": {
+            "method": "POST",
+            "header": [{"key": "Content-Type", "value": "application/json"}],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"name\": \"Sample Product\",\n  \"description\": \"A sample product\",\n  \"price\": 99.99,\n  \"stock\": 10\n}"
+            },
+            "url": {
+              "raw": "http://localhost:8080/product",
+              "protocol": "http",
+              "host": ["localhost"],
+              "port": "8080",
+              "path": ["product"]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Get All Products",
+          "request": {
+            "method": "GET",
+            "url": {
+              "raw": "http://localhost:8080/product",
+              "protocol": "http",
+              "host": ["localhost"],
+              "port": "8080",
+              "path": ["product"]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Product Health Check",
+          "request": {
+            "method": "GET",
+            "url": {
+              "raw": "http://localhost:8080/product/healthCheck",
+              "protocol": "http",
+              "host": ["localhost"],
+              "port": "8080",
+              "path": ["product", "healthCheck"]
+            }
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "Cart",
+      "item": [
+        {
+          "name": "Create Cart",
+          "request": {
+            "method": "POST",
+            "header": [{"key": "Content-Type", "value": "application/json"}],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"userId\": \"user123\",\n  \"items\": []\n}"
+            },
+            "url": {
+              "raw": "http://localhost:8080/cart",
+              "protocol": "http",
+              "host": ["localhost"],
+              "port": "8080",
+              "path": ["cart"]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Get All Carts",
+          "request": {
+            "method": "GET",
+            "url": {
+              "raw": "http://localhost:8080/cart",
+              "protocol": "http",
+              "host": ["localhost"],
+              "port": "8080",
+              "path": ["cart"]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Cart Health Check",
+          "request": {
+            "method": "GET",
+            "url": {
+              "raw": "http://localhost:8080/cart/healthCheck",
+              "protocol": "http",
+              "host": ["localhost"],
+              "port": "8080",
+              "path": ["cart", "healthCheck"]
+            }
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "Order",
+      "item": [
+        {
+          "name": "Create Order",
+          "request": {
+            "method": "POST",
+            "header": [{"key": "Content-Type", "value": "application/json"}],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"userId\": \"user123\",\n  \"items\": [],\n  \"status\": \"NEW\"\n}"
+            },
+            "url": {
+              "raw": "http://localhost:8080/order",
+              "protocol": "http",
+              "host": ["localhost"],
+              "port": "8080",
+              "path": ["order"]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Get All Orders",
+          "request": {
+            "method": "GET",
+            "url": {
+              "raw": "http://localhost:8080/order",
+              "protocol": "http",
+              "host": ["localhost"],
+              "port": "8080",
+              "path": ["order"]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Order Health Check",
+          "request": {
+            "method": "GET",
+            "url": {
+              "raw": "http://localhost:8080/order/healthCheck",
+              "protocol": "http",
+              "host": ["localhost"],
+              "port": "8080",
+              "path": ["order", "healthCheck"]
+            }
+          },
+          "response": []
+        }
+      ]
+    }
+  ]
+}
+
